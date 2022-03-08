@@ -6,8 +6,6 @@ import 'package:hamosad_scouting_app/misc/data_container.dart';
 class TeleopPage extends StatefulWidget {
   TeleopPage({Key? key}) : super(key: key);
 
-  final DataContainer<bool> canShootWhileMovingData = DataContainer(false);
-  final DataContainer<bool> canPickMultipleData = DataContainer(false);
   final DataContainer<bool> cantShootDynamicallyData = DataContainer(false);
   final DataContainer<String> anchorPointData = DataContainer("");
   final DataContainer<int> ballsPickedFloorData = DataContainer(0);
@@ -23,8 +21,6 @@ class TeleopPage extends StatefulWidget {
 
 class _TeleopPageState extends State<TeleopPage>
     with LastPageButton, NextPageButton {
-  late final ToggleButton canShootWhileMoving;
-  late final ToggleButton canPickMultiple;
   late final ToggleButton cantShootDynamically;
   late final TextEdit anchorPoint;
   late final ScoreCounter ballsPickedFloorCounter;
@@ -36,14 +32,6 @@ class _TeleopPageState extends State<TeleopPage>
 
   @override
   void initState() {
-    canShootWhileMoving = ToggleButton(
-      title: "Can the robot shoot while moving?",
-      container: widget.canShootWhileMovingData,
-    );
-    canPickMultiple = ToggleButton(
-      title: "Can the robot pick up more than one ball at once?",
-      container: widget.canPickMultipleData,
-    );
     cantShootDynamically = ToggleButton(
       title: "Does the robot need an anchor point to shoot?",
       container: widget.cantShootDynamicallyData,
@@ -102,8 +90,6 @@ class _TeleopPageState extends State<TeleopPage>
       ),
       body: WidgetList(
         children: [
-          canShootWhileMoving,
-          canPickMultiple,
           cantShootDynamically,
           widget.cantShootDynamicallyData.value ? anchorPoint : Container(),
           ballsPickedFeederCounter,
