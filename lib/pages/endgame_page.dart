@@ -7,6 +7,7 @@ class EndgamePage extends StatefulWidget {
   EndgamePage({Key? key}) : super(key: key);
 
   final DataContainer<double> barClimbedData = DataContainer(0);
+  final DataContainer<int> secondsClimbedData = DataContainer(0);
   final DataContainer<String> notesData = DataContainer("");
 
   @override
@@ -17,6 +18,7 @@ class _EndgamePageState extends State<EndgamePage>
     with LastPageButton, NextPageButton {
   late final OptionsSlider barClimbed;
   late final TextEdit notes;
+  late final StopwatchTimer secondsClimbed;
 
   @override
   void initState() {
@@ -24,6 +26,10 @@ class _EndgamePageState extends State<EndgamePage>
         title: "Robot has climbed to bar:",
         container: widget.barClimbedData,
         max: 4);
+    secondsClimbed = StopwatchTimer(
+      title: 'Time took to climb:',
+      secondsData: widget.secondsClimbedData,
+    );
     notes = TextEdit(
       title: "Additional Notes:",
       container: widget.notesData,
@@ -44,7 +50,11 @@ class _EndgamePageState extends State<EndgamePage>
         ],
       ),
       body: WidgetList(
-        children: [barClimbed, notes],
+        children: [
+          barClimbed,
+          secondsClimbed,
+          notes,
+        ],
       ),
     );
   }
