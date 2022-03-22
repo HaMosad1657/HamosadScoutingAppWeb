@@ -144,6 +144,11 @@ mixin SubmitButton {
                         }
                         sendReportToDatabase();
 
+                        if (creatingNewReport) {
+                          updateAverages();
+                          updateNotes();
+                        }
+
                         Navigator.of(context)
                             .popUntil((route) => route.isFirst);
                       },

@@ -45,7 +45,11 @@ class _GeneralInformationPageState extends State<GeneralInformationPage>
             (v) => v.toString(),
           )
           .toList() +
-      ["Eighth-Final", "Quarter-Final", "Semi-Final", "Final"];
+      [
+        "Quarter-Final",
+        "Semi-Final",
+        "Final",
+      ];
 
   late final DropdownMenu chooseGames;
   late final TextEdit teamNumber;
