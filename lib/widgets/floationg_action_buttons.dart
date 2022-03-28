@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hamosad_scouting_app/main.dart';
 import 'package:hamosad_scouting_app/misc/database.dart';
 import 'package:hamosad_scouting_app/pages/pages.dart';
 import 'widgets.dart';
@@ -123,7 +122,7 @@ mixin SubmitButton {
                     ),
                     PopupDialogButton(
                       text: "SUBMIT",
-                      onPressed: () {
+                      onPressed: () async {
                         if (creatingNewReport) {
                           reportId = generateReportId();
                           lastReport = (reportType == ReportType.game)
@@ -131,6 +130,8 @@ mixin SubmitButton {
                               : generatePitReportData(id: reportId);
                           reports.add(reportId);
                           lastReportType = reportType;
+                          await updateAverages();
+                          await updateNotes();
                         } else {
                           lastReport = (lastReportType == ReportType.game)
                               ? generateGameReportData(
@@ -144,12 +145,7 @@ mixin SubmitButton {
                                   reporterTeam: lastReport["reporterTeam"],
                                 );
                         }
-                        sendReportToDatabase();
-
-                        if (creatingNewReport) {
-                          updateAverages();
-                          updateNotes();
-                        }
+                        await sendReportToDatabase();
 
                         Navigator.of(context)
                             .popUntil((route) => route.isFirst);

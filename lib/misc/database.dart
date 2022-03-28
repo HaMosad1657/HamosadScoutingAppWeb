@@ -151,7 +151,7 @@ dynamic generatePitReportData(
   };
 }
 
-void sendReportToDatabase() async {
+Future<void> sendReportToDatabase() async {
   if (lastReportType == ReportType.game) {
     await gameReportsReference.update(lastReport);
   } else {
@@ -187,7 +187,8 @@ Future<void> updateNotes() async {
 }
 
 Future<void> updateAverages() async {
-  dynamic averages = (await averagesReference.get()).value;
+  final snapshot = await averagesReference.get();
+  dynamic averages = snapshot.value;
 
   String teamNumber = pages['info'].currentTeamData.value.toString();
 
@@ -199,6 +200,7 @@ Future<void> updateAverages() async {
           (ballsScored + pages['teleop'].ballsMissedData.value) *
           100)
       .toDouble();
+  if (scorePercent.isNaN) scorePercent = 0.0;
 
   var barsCanClimb = [false, false, false, false];
   if (pages['endgame'].barClimbedData.value.toInt() != 0) {
@@ -219,73 +221,89 @@ Future<void> updateAverages() async {
           pages['teleop'].upperScoreData.value * 2,
       'avgScoreTotal': pages['summary'].totalScoreData.value,
       'avgBarClimbed': pages['endgame'].barClimbedData.value.toInt(),
-      'avgTimeClimbed': pages['endgame'].secondsClimbedData.value.toDouble(),
+      'avgTimeClimbed':
+          (pages['endgame'].secondsClimbedData.value ?? 0).toDouble(),
       'barsCanClimb': barsCanClimb,
       'avgRobotFocus': pages['summary'].robotFocusData.value,
       'numberOfReports': 1,
     };
   } else {
     currentTeamData = averages[teamNumber];
-    double numberOfReports = currentTeamData['numberOfReports'].toDouble();
+    double numberOfReports =
+        (currentTeamData['numberOfReports'] ?? 1).toDouble();
     currentTeamData['numberOfReports'] = ++numberOfReports;
 
     double averageBallsAutonomus =
-        currentTeamData['avgBallsAutonomus'].toDouble();
-    double ballsAutonomus = (pages['autonomus'].lowerScoreData.value +
-            pages['autonomus'].upperScoreData.value)
+        (currentTeamData['avgBallsAutonomus'] ?? 0).toDouble();
+    double ballsAutonomus = ((pages['autonomus'].lowerScoreData.value +
+                pages['autonomus'].upperScoreData.value) ??
+            0)
         .toDouble();
     currentTeamData['avgBallsAutonomus'] = averageBallsAutonomus +
         (ballsAutonomus - averageBallsAutonomus) / numberOfReports;
 
     double averageScoreAutonomus =
-        currentTeamData['avgScoreAutonomus'].toDouble();
-    double scoreAutonomus = (pages['autonomus'].lowerScoreData.value * 2 +
-            pages['autonomus'].upperScoreData.value * 4 +
-            (pages['autonomus'].robotMovedData.value ? 2 : 0))
+        (currentTeamData['avgScoreAutonomus'] ?? 0).toDouble();
+    double scoreAutonomus = ((pages['autonomus'].lowerScoreData.value * 2 +
+                pages['autonomus'].upperScoreData.value * 4 +
+                (pages['autonomus'].robotMovedData.value ? 2 : 0)) ??
+            0)
         .toDouble();
     currentTeamData['avgScoreAutonomus'] = averageScoreAutonomus +
         (scoreAutonomus - averageScoreAutonomus) / numberOfReports;
 
-    double averageLowerHub = currentTeamData['avgLowerTeleop'].toDouble();
-    double lowerHub = (pages['teleop'].lowerScoreData.value).toDouble();
+    double averageLowerHub =
+        (currentTeamData['avgLowerTeleop'] ?? 0).toDouble();
+    double lowerHub = (pages['teleop'].lowerScoreData.value ?? 0).toDouble();
     currentTeamData['avgLowerTeleop'] =
         averageLowerHub + (lowerHub - averageLowerHub) / numberOfReports;
 
-    double averageUpperHub = currentTeamData['avgUpperTeleop'].toDouble();
-    double upperHub = (pages['teleop'].upperScoreData.value).toDouble();
+    double averageUpperHub =
+        (currentTeamData['avgUpperTeleop'] ?? 0).toDouble();
+    double upperHub = (pages['teleop'].upperScoreData.value ?? 0).toDouble();
     currentTeamData['avgUpperTeleop'] =
         averageUpperHub + (upperHub - averageUpperHub) / numberOfReports;
 
-    double averageScorePercent = currentTeamData['avgScorePercent'].toDouble();
-    int ballsScored = pages['teleop'].lowerScoreData.value +
-        pages['teleop'].upperScoreData.value;
+    double averageScorePercent =
+        (currentTeamData['avgScorePercent'] ?? 0).toDouble();
+    int ballsScored = (pages['teleop'].lowerScoreData.value +
+            pages['teleop'].upperScoreData.value)
+        .toDouble();
     double scorePercent = (ballsScored /
             (ballsScored + pages['teleop'].ballsMissedData.value) *
             100)
         .toDouble();
     currentTeamData['avgScorePercent'] = averageScorePercent +
         (scorePercent - averageScorePercent) / numberOfReports;
+    if (currentTeamData['avgScorePercent'].isNaN) {
+      currentTeamData['avgScorePercent'] = 0.0;
+    }
 
-    double averageScoreTeleop = currentTeamData['avgScoreTeleop'].toDouble();
-    double scoreTeleop = (pages['teleop'].lowerScoreData.value +
-            pages['teleop'].upperScoreData.value * 2)
+    double averageScoreTeleop =
+        (currentTeamData['avgScoreTeleop'] ?? 0).toDouble();
+    double scoreTeleop = ((pages['teleop'].lowerScoreData.value +
+                pages['teleop'].upperScoreData.value * 2) ??
+            0)
         .toDouble();
     currentTeamData['avgScoreTeleop'] = averageScoreTeleop +
         (scoreTeleop - averageScoreTeleop) / numberOfReports;
 
-    double averageTotalScore = currentTeamData['avgScoreTotal'].toDouble();
-    double totalScore = (pages['summary'].totalScoreData.value).toDouble();
+    double averageTotalScore =
+        (currentTeamData['avgScoreTotal'] ?? 0).toDouble();
+    double totalScore =
+        ((pages['summary'].totalScoreData.value) ?? 0).toDouble();
     currentTeamData['avgScoreTotal'] =
         averageTotalScore + (totalScore - averageTotalScore) / numberOfReports;
 
-    double averageBars = currentTeamData['avgBarClimbed'].toDouble();
-    double barClimbed = pages['endgame'].barClimbedData.value.toDouble();
+    double averageBars = (currentTeamData['avgBarClimbed'] ?? 0).toDouble();
+    double barClimbed = (pages['endgame'].barClimbedData.value ?? 0).toDouble();
     currentTeamData['avgBarClimbed'] =
         averageBars + (barClimbed - averageBars) / numberOfReports;
 
-    int averageSecondsClimbed = currentTeamData['avgSecondsClimbed'].toDouble();
+    double averageSecondsClimbed =
+        (currentTeamData['avgSecondsClimbed'] ?? 0).toDouble();
     double secondsClimbed =
-        pages['endgame'].secondsClimbedData.value.toDouble();
+        (pages['endgame'].secondsClimbedData.value ?? 0).toDouble();
     currentTeamData['avgSecondsClimbed'] = averageSecondsClimbed +
         (secondsClimbed - averageSecondsClimbed) / numberOfReports;
 
@@ -295,8 +313,9 @@ Future<void> updateAverages() async {
     }
     currentTeamData['barsCanClimb'] = barsCanClimb;
 
-    double averageRobotFocus = currentTeamData['avgRobotFocus'].toDouble();
-    double robotFocus = (pages['summary'].robotFocusData.value).toDouble();
+    double averageRobotFocus =
+        (currentTeamData['avgRobotFocus'] ?? 0).toDouble();
+    double robotFocus = (pages['summary'].robotFocusData.value ?? 0).toDouble();
     currentTeamData['avgRobotFocus'] =
         averageRobotFocus + (robotFocus - averageRobotFocus) / numberOfReports;
   }
