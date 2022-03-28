@@ -40,16 +40,6 @@ class _PitInformationState extends State<PitInformation>
               teamNumber,
             ],
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding: const EdgeInsets.all(8),
-              child: Text(
-                "Report id: $reportId",
-                style: AppFont(size: 15, color: Colors.grey.shade700).getFont(),
-              ),
-            ),
-          ),
         ],
       ),
       floatingActionButton: Stack(

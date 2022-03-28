@@ -49,6 +49,7 @@ class _GeneralInformationPageState extends State<GeneralInformationPage>
         "Quarter-Final",
         "Semi-Final",
         "Final",
+        "Practice",
       ];
 
   late final DropdownMenu chooseGames;
@@ -111,7 +112,7 @@ class _GeneralInformationPageState extends State<GeneralInformationPage>
             child: WidgetList(
               children: [
                 chooseGames,
-                if (["Eighth-Final", "Quarter-Final", "Semi-Final", "Final"]
+                if (["Quarter-Final", "Semi-Final", "Final", "Practice"]
                     .contains(gameNumber))
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -120,7 +121,7 @@ class _GeneralInformationPageState extends State<GeneralInformationPage>
                         padding: const EdgeInsets.all(8.0),
                         child: teamNumber,
                       ),
-                      allianceButtons
+                      Center(child: allianceButtons)
                     ],
                   )
                 else
@@ -270,16 +271,6 @@ class _GeneralInformationPageState extends State<GeneralInformationPage>
               ],
             ),
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding: const EdgeInsets.all(8),
-              child: Text(
-                "Report id: $reportId",
-                style: AppFont(size: 15, color: Colors.grey.shade700).getFont(),
-              ),
-            ),
-          ),
         ],
       ),
       floatingActionButton: Stack(
@@ -315,7 +306,7 @@ class _GeneralInformationPageState extends State<GeneralInformationPage>
                     ),
                   );
                 } else {
-                  if (["Eighth-Final", "Quarter-Final", "Semi-Final", "Final"]
+                  if (["Quarter-Final", "Semi-Final", "Final", "Practice"]
                       .contains(gameNumber)) {
                     if (widget.currentTeamData.value == "") {
                       showDialog(

@@ -6,7 +6,7 @@ import 'package:hamosad_scouting_app/pages/pages.dart';
 
 class StopwatchTimer extends StatefulWidget {
   final String title;
-  final DataContainer<int> secondsData;
+  final DataContainer<double> secondsData;
 
   const StopwatchTimer({
     Key? key,
@@ -99,7 +99,7 @@ class _StopwatchTimerState extends State<StopwatchTimer> {
                     if (stopwatch.isRunning) {
                       stopwatch.stop();
                       widget.secondsData.value =
-                          stopwatch.elapsedMilliseconds ~/ 1000;
+                          stopwatch.elapsedMilliseconds / 1000;
                     } else {
                       stopwatch.start();
                     }
@@ -125,7 +125,7 @@ class _StopwatchTimerState extends State<StopwatchTimer> {
                     if (!stopwatch.isRunning) {
                       stopwatch.reset();
                       widget.secondsData.value =
-                          stopwatch.elapsedMilliseconds ~/ 1000;
+                          stopwatch.elapsedMilliseconds / 1000;
                     }
                   },
                 ),

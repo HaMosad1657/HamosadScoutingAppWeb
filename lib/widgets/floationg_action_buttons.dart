@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hamosad_scouting_app/main.dart';
 import 'package:hamosad_scouting_app/misc/database.dart';
 import 'package:hamosad_scouting_app/pages/pages.dart';
 import 'widgets.dart';
@@ -124,6 +125,7 @@ mixin SubmitButton {
                       text: "SUBMIT",
                       onPressed: () {
                         if (creatingNewReport) {
+                          reportId = generateReportId();
                           lastReport = (reportType == ReportType.game)
                               ? generateGameReportData(id: reportId)
                               : generatePitReportData(id: reportId);
@@ -151,6 +153,7 @@ mixin SubmitButton {
 
                         Navigator.of(context)
                             .popUntil((route) => route.isFirst);
+                        // RestartWidget.restartApp(context);
                       },
                     ),
                   ],

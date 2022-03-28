@@ -7,7 +7,7 @@ class EndgamePage extends StatefulWidget {
   EndgamePage({Key? key}) : super(key: key);
 
   final DataContainer<double> barClimbedData = DataContainer(0);
-  final DataContainer<int> secondsClimbedData = DataContainer(0);
+  final DataContainer<double> secondsClimbedData = DataContainer(0);
   final DataContainer<String> notesData = DataContainer("");
 
   @override

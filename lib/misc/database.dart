@@ -36,7 +36,9 @@ String generateReportId() {
   var r = Random();
   const _chars =
       'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
-  return List.generate(6, (index) => _chars[r.nextInt(_chars.length)]).join();
+  final signature =
+      List.generate(3, (index) => _chars[r.nextInt(_chars.length)]).join();
+  return '~$signature~${pages['home'].reporterNameData.value}_${pages['home'].reporterTeamData.value}-${reportType == ReportType.game ? int.tryParse(pages['info'].currentTeamData.value) ?? pages['info'].currentTeamData.value : int.tryParse(pages['pit_info'].currentTeamData.value) ?? pages['pit_info'].currentTeamData.value}_${int.tryParse(pages['info'].gameNumberData.value) ?? pages['info'].gameNumberData.value}';
 }
 
 dynamic getDatetime() {
@@ -217,6 +219,7 @@ Future<void> updateAverages() async {
           pages['teleop'].upperScoreData.value * 2,
       'avgScoreTotal': pages['summary'].totalScoreData.value,
       'avgBarClimbed': pages['endgame'].barClimbedData.value.toInt(),
+      'avgTimeClimbed': pages['endgame'].secondsClimbedData.value.toDouble(),
       'barsCanClimb': barsCanClimb,
       'avgRobotFocus': pages['summary'].robotFocusData.value,
       'numberOfReports': 1,
@@ -279,6 +282,12 @@ Future<void> updateAverages() async {
     double barClimbed = pages['endgame'].barClimbedData.value.toDouble();
     currentTeamData['avgBarClimbed'] =
         averageBars + (barClimbed - averageBars) / numberOfReports;
+
+    int averageSecondsClimbed = currentTeamData['avgSecondsClimbed'].toDouble();
+    double secondsClimbed =
+        pages['endgame'].secondsClimbedData.value.toDouble();
+    currentTeamData['avgSecondsClimbed'] = averageSecondsClimbed +
+        (secondsClimbed - averageSecondsClimbed) / numberOfReports;
 
     var barsCanClimb = currentTeamData['barsCanClimb'];
     if (pages['endgame'].barClimbedData.value.toInt() != 0) {

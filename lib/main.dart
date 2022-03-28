@@ -8,6 +8,37 @@ import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
+class RestartWidget extends StatefulWidget {
+  const RestartWidget({Key? key, required this.child}) : super(key: key);
+
+  final Widget child;
+
+  static void restartApp(BuildContext context) {
+    context.findAncestorStateOfType<_RestartWidgetState>()!.restartApp();
+  }
+
+  @override
+  _RestartWidgetState createState() => _RestartWidgetState();
+}
+
+class _RestartWidgetState extends State<RestartWidget> {
+  Key key = UniqueKey();
+
+  void restartApp() {
+    setState(() {
+      key = UniqueKey();
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return KeyedSubtree(
+      key: key,
+      child: widget.child,
+    );
+  }
+}
+
 void main() async {
   if (!kIsWeb && Platform.isWindows) {
     runApp(const WindowsApp());
@@ -19,7 +50,9 @@ void main() async {
     initData();
     getTeams();
     runApp(
-      const MyApp(),
+      const RestartWidget(
+        child: MyApp(),
+      ),
     );
   }
 }
