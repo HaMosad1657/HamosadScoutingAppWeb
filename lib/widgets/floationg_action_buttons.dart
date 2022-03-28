@@ -130,6 +130,12 @@ mixin SubmitButton {
                               : generatePitReportData(id: reportId);
                           reports.add(reportId);
                           lastReportType = reportType;
+                          if (pages['home'].reporterTeamData.value == '1657') {
+                            set1657();
+                          } else {
+                            initData();
+                          }
+
                           await updateAverages();
                           await updateNotes();
                         } else {

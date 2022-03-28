@@ -24,6 +24,13 @@ void initData() {
   });
 }
 
+void set1657() {
+  gameReportsReference = database.ref('dcmp-1657/reports');
+  pitReportsReference = database.ref('dcmp-1657/pit');
+  averagesReference = database.ref('dcmp-1657/averages');
+  notesReference = database.ref('dcmp-1657/notes');
+}
+
 void getTeams() {
   gamesReference.onValue.listen((DatabaseEvent event) {
     gameTeamsData = event.snapshot.value;
