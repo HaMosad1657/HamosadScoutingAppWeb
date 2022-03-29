@@ -25,10 +25,10 @@ void initData() {
 }
 
 void set1657() {
-  gameReportsReference = database.ref('dcmp-1657/reports');
-  pitReportsReference = database.ref('dcmp-1657/pit');
-  averagesReference = database.ref('dcmp-1657/averages');
-  notesReference = database.ref('dcmp-1657/notes');
+  gameReportsReference = database.ref('dcmp-new-1657/reports');
+  pitReportsReference = database.ref('dcmp-new-1657/pit');
+  averagesReference = database.ref('dcmp-new-1657/averages');
+  notesReference = database.ref('dcmp-new-1657/notes');
 }
 
 void getTeams() {
@@ -46,6 +46,34 @@ String generateReportId() {
   final signature =
       List.generate(3, (index) => _chars[r.nextInt(_chars.length)]).join();
   return '~$signature~${pages['home'].reporterNameData.value}_${pages['home'].reporterTeamData.value}-${reportType == ReportType.game ? int.tryParse(pages['info'].currentTeamData.value) ?? pages['info'].currentTeamData.value : int.tryParse(pages['pit_info'].currentTeamData.value) ?? pages['pit_info'].currentTeamData.value}_${int.tryParse(pages['info'].gameNumberData.value) ?? pages['info'].gameNumberData.value}';
+}
+
+String generateReportId1657() {
+  var r = Random();
+  const _chars =
+      'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
+  final signature =
+      List.generate(3, (index) => _chars[r.nextInt(_chars.length)]).join();
+  String game;
+  switch (int.tryParse(pages['info'].gameNumberData.value) ??
+      pages['info'].gameNumberData.value) {
+    case 'Quarter-Final':
+      game = '81';
+      break;
+
+    case 'Semi-Final':
+      game = '82';
+
+      break;
+
+    case 'Final':
+      game = '83';
+      break;
+
+    default:
+      game = pages['info'].gameNumberData.value.toString();
+  }
+  return '$game-${pages['info'].currentTeamData.value.toString()}~$signature~';
 }
 
 dynamic getDatetime() {

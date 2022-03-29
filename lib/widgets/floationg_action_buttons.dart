@@ -124,17 +124,18 @@ mixin SubmitButton {
                       text: "SUBMIT",
                       onPressed: () async {
                         if (creatingNewReport) {
-                          reportId = generateReportId();
+                          if (pages['home'].reporterTeamData.value == '1657') {
+                            reportId = generateReportId1657();
+                            set1657();
+                          } else {
+                            reportId = generateReportId();
+                            initData();
+                          }
                           lastReport = (reportType == ReportType.game)
                               ? generateGameReportData(id: reportId)
                               : generatePitReportData(id: reportId);
                           reports.add(reportId);
                           lastReportType = reportType;
-                          if (pages['home'].reporterTeamData.value == '1657') {
-                            set1657();
-                          } else {
-                            initData();
-                          }
 
                           await updateAverages();
                           await updateNotes();
