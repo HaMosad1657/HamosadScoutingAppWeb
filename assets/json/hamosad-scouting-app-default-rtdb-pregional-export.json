@@ -1,0 +1,977 @@
+{
+  "pit" : {
+    "YE1nHW" : {
+      "canAdjustShootAngle" : false,
+      "canShootDynamically" : false,
+      "canShootLower" : true,
+      "canShootUpper" : false,
+      "canShootWhileMoving" : true,
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "1:39",
+        "year" : "2022"
+      },
+      "drivingType" : "Swerve",
+      "hasTurret" : false,
+      "notes" : "",
+      "reporterName" : "סופי",
+      "reporterTeam" : "1657",
+      "shootingHeight" : "High",
+      "team" : 7845,
+      "weaknesses" : "",
+      "whichBarCanClimb" : [ 1, 2, 3 ]
+    },
+    "Ykr26E" : {
+      "canAdjustShootAngle" : true,
+      "canShootDynamically" : false,
+      "canShootLower" : false,
+      "canShootUpper" : true,
+      "canShootWhileMoving" : false,
+      "datetime" : {
+        "day" : "9",
+        "month" : "3",
+        "time" : "8:47",
+        "year" : "2022"
+      },
+      "drivingType" : "גלגלי מקאנום בהנעת טנק",
+      "hasTurret" : false,
+      "notes" : "",
+      "reporterName" : "alon hamburger ",
+      "reporterTeam" : "1657",
+      "shootingHeight" : "High",
+      "team" : 4744,
+      "weaknesses" : "תזוזה לצדדים יותר איטית מקדימה אחורה",
+      "whichBarCanClimb" : [ 1, 2 ]
+    },
+    "thZGbK" : {
+      "canAdjustShootAngle" : false,
+      "canShootDynamically" : true,
+      "canShootLower" : false,
+      "canShootUpper" : true,
+      "canShootWhileMoving" : false,
+      "datetime" : {
+        "day" : "9",
+        "month" : "3",
+        "time" : "8:54",
+        "year" : "2022"
+      },
+      "drivingType" : "Tank",
+      "hasTurret" : false,
+      "notes" : "",
+      "reporterName" : "alon hamburger ",
+      "reporterTeam" : "1657",
+      "shootingHeight" : "Low",
+      "team" : 4661,
+      "weaknesses" : "הנעת טנק מונעת חופשיות מלאה בתזוזה",
+      "whichBarCanClimb" : [ 1 ]
+    },
+    "wUUqvj" : {
+      "canAdjustShootAngle" : false,
+      "canShootDynamically" : true,
+      "canShootLower" : true,
+      "canShootUpper" : false,
+      "canShootWhileMoving" : false,
+      "datetime" : {
+        "day" : "9",
+        "month" : "3",
+        "time" : "8:56",
+        "year" : "2022"
+      },
+      "drivingType" : "Tank",
+      "hasTurret" : true,
+      "notes" : "",
+      "reporterName" : "alon hamburger ",
+      "reporterTeam" : "1657",
+      "shootingHeight" : "High",
+      "team" : 5291,
+      "weaknesses" : "שוטר ארוך ופגיע",
+      "whichBarCanClimb" : [ 1 ]
+    },
+    "wgNCFo" : {
+      "canAdjustShootAngle" : false,
+      "canShootDynamically" : true,
+      "canShootLower" : true,
+      "canShootUpper" : false,
+      "canShootWhileMoving" : false,
+      "datetime" : {
+        "day" : "9",
+        "month" : "3",
+        "time" : "8:51",
+        "year" : "2022"
+      },
+      "drivingType" : "Swerve",
+      "hasTurret" : false,
+      "notes" : "",
+      "reporterName" : "alon hamburger ",
+      "reporterTeam" : "1657",
+      "shootingHeight" : "Low",
+      "team" : 5135,
+      "weaknesses" : "מאד גדול",
+      "whichBarCanClimb" : [ 1, 2, 3 ]
+    }
+  },
+  "reports" : {
+    "1Yb22Z" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "0:5",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : "לא ניסה לטפש"
+      },
+      "focus" : 1,
+      "game" : "Final",
+      "reporterName" : "Omri and Adam",
+      "reporterTeam" : "1657",
+      "score" : 2,
+      "team" : 1657,
+      "teleop" : {
+        "canPickMultiple" : false,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 2,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 2,
+        "score" : 0,
+        "upper" : 0
+      }
+    },
+    "3TI1kV" : {
+      "alliance" : "red",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "5:17",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : ""
+      },
+      "focus" : 5,
+      "game" : "Final",
+      "reporterName" : "Noam & Shaked",
+      "reporterTeam" : "1657",
+      "score" : 6,
+      "team" : 1657,
+      "teleop" : {
+        "canPickMultiple" : false,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 5,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 6,
+        "score" : 4,
+        "upper" : 2
+      }
+    },
+    "4UCkPl" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "1:38",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 3,
+        "notes" : ""
+      },
+      "focus" : 5,
+      "game" : "Final",
+      "reporterName" : "עילי",
+      "reporterTeam" : "1657",
+      "score" : 34,
+      "team" : 1574,
+      "teleop" : {
+        "canPickMultiple" : true,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 4,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 14,
+        "score" : 22,
+        "upper" : 11
+      }
+    },
+    "DYdtIw" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : false,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "24",
+        "month" : "2",
+        "time" : "23:49",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : "התחיל לנסוע לקרת אמצא הteleop שהאור שלהם אדום הם יורים כדורים "
+      },
+      "focus" : 5,
+      "game" : "Final",
+      "reporterName" : "Noam marcus",
+      "reporterTeam" : "1657",
+      "score" : 22,
+      "team" : 1690,
+      "teleop" : {
+        "canPickMultiple" : true,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : true,
+        "lower" : 0,
+        "missed" : 1,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 10,
+        "score" : 22,
+        "upper" : 11
+      }
+    },
+    "IkADzt" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : false,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "2:6",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : "הפריעו מאוד לרובוט לתפוס ולזרוק "
+      },
+      "focus" : 5,
+      "game" : "Final",
+      "reporterName" : "Noam marcus",
+      "reporterTeam" : "1657",
+      "score" : 14,
+      "team" : 1690,
+      "teleop" : {
+        "canPickMultiple" : true,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : true,
+        "lower" : 0,
+        "missed" : 2,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 9,
+        "score" : 14,
+        "upper" : 7
+      }
+    },
+    "IlLW6v" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 1,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 1,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "2:6",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : ""
+      },
+      "focus" : 4,
+      "game" : "Final",
+      "reporterName" : "Alon hamburger",
+      "reporterTeam" : "1657",
+      "score" : 6,
+      "team" : 5635,
+      "teleop" : {
+        "canPickMultiple" : false,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 1,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 2,
+        "score" : 4,
+        "upper" : 2
+      }
+    },
+    "JCij3x" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 1,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 8,
+        "upper" : 2
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "4:40",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 2,
+        "notes" : ""
+      },
+      "focus" : 5,
+      "game" : "Final",
+      "reporterName" : "עילי ",
+      "reporterTeam" : "1657",
+      "score" : 54,
+      "team" : 1690,
+      "teleop" : {
+        "canPickMultiple" : true,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : true,
+        "lower" : 0,
+        "missed" : 6,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 24,
+        "score" : 38,
+        "upper" : 19
+      }
+    },
+    "KRVqK4" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 1,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 1,
+        "score" : 4,
+        "upper" : 1
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "1:26",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 3,
+        "notes" : ""
+      },
+      "focus" : 5,
+      "game" : "Final",
+      "reporterName" : "Omri and Noam",
+      "reporterTeam" : "1657",
+      "score" : 34,
+      "team" : 1574,
+      "teleop" : {
+        "canPickMultiple" : true,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 3,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 12,
+        "score" : 18,
+        "upper" : 9
+      }
+    },
+    "MsXhGB" : {
+      "alliance" : "red",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 1,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "24",
+        "month" : "2",
+        "time" : "23:37",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : "הוא לא הצליח לטפס אבל יכול להגיא לשלישי תפס וקלע 2 כדורים לא בצבע שלו, לא ספרנו אותם בסקאוטינג"
+      },
+      "focus" : 4,
+      "game" : "Final",
+      "reporterName" : "Noam marcus",
+      "reporterTeam" : "1657",
+      "score" : 8,
+      "team" : 7845,
+      "teleop" : {
+        "canPickMultiple" : true,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 6,
+        "missed" : 2,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 8,
+        "score" : 6,
+        "upper" : 0
+      }
+    },
+    "QrMjwM" : {
+      "alliance" : "red",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : false,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 4,
+        "upper" : 1
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "1:12",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : ""
+      },
+      "focus" : 5,
+      "game" : "Final",
+      "reporterName" : "alon hamburger",
+      "reporterTeam" : "1657",
+      "score" : 22,
+      "team" : 1577,
+      "teleop" : {
+        "canPickMultiple" : false,
+        "canShootDynamically" : true,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 2,
+        "notes" : "קלע כדור של הברית הנגדית אספו הרבא כדורים לא נכונים",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 12,
+        "score" : 18,
+        "upper" : 9
+      }
+    },
+    "QxlgWq" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 3,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "1:26",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : ""
+      },
+      "focus" : 5,
+      "game" : "Final",
+      "reporterName" : "alon hamburger",
+      "reporterTeam" : "1657",
+      "score" : 66,
+      "team" : 1690,
+      "teleop" : {
+        "canPickMultiple" : false,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 4,
+        "notes" : "סייקלים של שלןשה רובוטים",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 35,
+        "score" : 64,
+        "upper" : 32
+      }
+    },
+    "S4Hc1h" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "2:19",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : ""
+      },
+      "focus" : 5,
+      "game" : "Final",
+      "reporterName" : "Noam marcus",
+      "reporterTeam" : "1657",
+      "score" : 10,
+      "team" : 1657,
+      "teleop" : {
+        "canPickMultiple" : true,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 7,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 12,
+        "score" : 8,
+        "upper" : 4
+      }
+    },
+    "UtGpF6" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 1,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "1:54",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 2,
+        "notes" : "אפסים... "
+      },
+      "focus" : 5,
+      "game" : "Final",
+      "reporterName" : "סופי",
+      "reporterTeam" : "1657",
+      "score" : 8,
+      "team" : 3835,
+      "teleop" : {
+        "canPickMultiple" : false,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 1,
+        "notes" : "כדור נתקע במערכת אסיפה",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 1,
+        "score" : 0,
+        "upper" : 0
+      }
+    },
+    "Uyyoci" : {
+      "alliance" : "red",
+      "autonomus" : {
+        "lower" : 1,
+        "missed" : 1,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 1,
+        "score" : 2,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "4:30",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : "רובוט שנראה שיכול לעשות יותר ממה שהוא עושה"
+      },
+      "focus" : 1,
+      "game" : "Final",
+      "reporterName" : "Omri and Yarden",
+      "reporterTeam" : "1657",
+      "score" : 11,
+      "team" : 7845,
+      "teleop" : {
+        "canPickMultiple" : true,
+        "canShootDynamically" : true,
+        "canShootWhileMoving" : false,
+        "lower" : 7,
+        "missed" : 5,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 12,
+        "score" : 7,
+        "upper" : 0
+      }
+    },
+    "YHEud5" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : false,
+        "notes" : "לא זז ",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "0:23",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : "יש לרובוט טיפוס אבל הוא לא טיפס"
+      },
+      "focus" : 1,
+      "game" : "Final",
+      "reporterName" : "Omri and Adam",
+      "reporterTeam" : "1657",
+      "score" : 13,
+      "team" : 3075,
+      "teleop" : {
+        "canPickMultiple" : true,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 1,
+        "missed" : 3,
+        "notes" : "",
+        "pickedFeeder" : 1,
+        "pickedFloor" : 9,
+        "score" : 13,
+        "upper" : 6
+      }
+    },
+    "YYTBjA" : {
+      "alliance" : "red",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "4:55",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : "לרובוט יש פוטנציאל לא ממוש"
+      },
+      "focus" : 1,
+      "game" : "Final",
+      "reporterName" : "Omri and Hamburger",
+      "reporterTeam" : "1657",
+      "score" : 6,
+      "team" : 1657,
+      "teleop" : {
+        "canPickMultiple" : false,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 2,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 4,
+        "score" : 4,
+        "upper" : 2
+      }
+    },
+    "g6tDsF" : {
+      "alliance" : "red",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : false,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 4,
+        "upper" : 1
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "2:53",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : ""
+      },
+      "focus" : 1,
+      "game" : "Final",
+      "reporterName" : "Adam & Omri",
+      "reporterTeam" : "1657",
+      "score" : 12,
+      "team" : 3075,
+      "teleop" : {
+        "canPickMultiple" : true,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 5,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 9,
+        "score" : 8,
+        "upper" : 4
+      }
+    },
+    "liUA03" : {
+      "alliance" : "red",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "3:52",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : ""
+      },
+      "focus" : 1,
+      "game" : "Final",
+      "reporterName" : "alon hamburger",
+      "reporterTeam" : "1657",
+      "score" : 2,
+      "team" : 1657,
+      "teleop" : {
+        "canPickMultiple" : false,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 1,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 0,
+        "upper" : 0
+      }
+    },
+    "spHEzM" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 1,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 1,
+        "score" : 0,
+        "upper" : 0
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "4:55",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 3,
+        "notes" : "טיפס הרבה לפני האנדגיים. נראה לא מאוד יציב על הבר השלישי, אולי אפילו נוגע ברצפה"
+      },
+      "focus" : 3,
+      "game" : "Final",
+      "reporterName" : "Noam & Shaked",
+      "reporterTeam" : "1657",
+      "score" : 12,
+      "team" : 5635,
+      "teleop" : {
+        "canPickMultiple" : false,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 0,
+        "notes" : "לא ניסה לאסוף/לירות כדורים",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 0,
+        "score" : 0,
+        "upper" : 0
+      }
+    },
+    "uQYscM" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 1,
+        "score" : 4,
+        "upper" : 1
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "2:42",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : "לא ניסה לטפס"
+      },
+      "focus" : 1,
+      "game" : "Final",
+      "reporterName" : "Adam & Omri",
+      "reporterTeam" : "1657",
+      "score" : 6,
+      "team" : 1577,
+      "teleop" : {
+        "canPickMultiple" : false,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 1,
+        "notes" : "רובוט נתקע אחרי כמה שניות",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 1,
+        "score" : 0,
+        "upper" : 0
+      }
+    },
+    "uiqwTN" : {
+      "alliance" : "blue",
+      "autonomus" : {
+        "lower" : 0,
+        "missed" : 0,
+        "moved" : true,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 2,
+        "score" : 4,
+        "upper" : 1
+      },
+      "datetime" : {
+        "day" : "25",
+        "month" : "2",
+        "time" : "3:24",
+        "year" : "2022"
+      },
+      "endgame" : {
+        "bar" : 0,
+        "notes" : ""
+      },
+      "focus" : 5,
+      "game" : "Final",
+      "reporterName" : "alon hamburger",
+      "reporterTeam" : "1657",
+      "score" : 42,
+      "team" : 1690,
+      "teleop" : {
+        "canPickMultiple" : false,
+        "canShootDynamically" : false,
+        "canShootWhileMoving" : false,
+        "lower" : 0,
+        "missed" : 6,
+        "notes" : "",
+        "pickedFeeder" : 0,
+        "pickedFloor" : 24,
+        "score" : 36,
+        "upper" : 18
+      }
+    }
+  }
+}
